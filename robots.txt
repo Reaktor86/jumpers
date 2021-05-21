@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /css
+Disallow: /maps
+Disallow: /mysql
+Disallow: /scripts
+Disallow: /server
+Disallow: /vendor

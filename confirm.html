@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Продтверждение email</title>
+</head>
+<body>
+    <div class="main">
+        <p class="email">Email подтверждён! Перенаправление ... <span class="counter">5</span></p>
+        <p><a href="index.php">щёлкните</a>, чтобы не ждать</p>
+    </div>
+</body>
+</html>
+
+<style>
+    p {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email {
+        font-size: 22px;
+        font-weight: bold;
+        color: #43516d;
+    }
+</style>
+
+<script>
+    function start() {
+        let counter = document.querySelector('.counter');
+        let inter = setInterval(function (){
+            if (counter.innerHTML <= 1) {
+                clearInterval(inter);
+                location.href = 'index.php';
+            }
+            counter.innerHTML--;
+        }, 1000);
+    }
+    start();
+
+</script>
